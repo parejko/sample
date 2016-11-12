@@ -1,0 +1,30 @@
+.main-nav {
+  display: none;
+  &.mobile-active {
+    display: block;
+  }
+  @media all and (min-width: 767px) {
+    display: block;
+  }
+  li {
+    display: block;
+    @media all and (min-width: 767px) {
+      display: inline-block;
+    }
+
+  }
+
+}
+
+.button-mobile-menu {
+  @media all and (min-width: 767px) {
+    display: none;
+  }
+}
+
+.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}

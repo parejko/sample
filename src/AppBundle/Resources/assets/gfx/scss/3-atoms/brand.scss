@@ -1,0 +1,11 @@
+.brand {
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+  padding-top: 9px;
+  @media all and (min-width: 767px) {
+    font-size: 35px;
+  }
+}

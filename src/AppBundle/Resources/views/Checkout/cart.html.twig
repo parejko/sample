@@ -3,5 +3,135 @@
 {% block title %}AppBundle:Checkout:cart{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Checkout:cart page</h1>
+    <script>
+        $(document).ready(function () {
+
+            $('.js-checkout-quantity').text(localStorage.getItem('testObject'));
+        });
+    </script>
+    <div class="container">
+        <div class="col-xs-12 center">
+            <h1 class="heading heading--centered">Checkout</h1></div>
+    </div>
+    <div class="container">
+        <div class="col-md-6">
+            <form id="checkout-form">
+                <h2 class="heading">Delivery address</h2>
+                <div class="input">
+                    <label for="checkout-first-name" class="input__label">First name <span
+                                class="required-field"></span></label>
+                    <input id="checkout-first-name" class="input__field js-checkout-input" required>
+                </div>
+                <div class="input">
+                    <label for="checkout-last-name" class="input__label">Last name <span class="required-field"></span></label>
+                    <input id="checkout-last-name" class="input__field js-checkout-input" required>
+                </div>
+                <div class="input">
+                    <label for="checkout-email" class="input__label">E-mail <span class="required-field"></span></label>
+                    <input id="checkout-email" type="email" class="input__field js-checkout-input" required>
+                </div>
+                <div class="input">
+                    <label for="checkout-phone" class="input__label">Phone </label>
+                    <input id="checkout-phone" class="input__field js-checkout-input">
+                </div>
+                <div class="input">
+                    <label for="checkout-address" class="input__label">Address <span
+                                class="required-field"></span></label>
+                    <input id="checkout-address" class="input__field js-checkout-input" required>
+                </div>
+                <div class="input">
+                    <label for="checkout-address-cont" class="input__label">Address cont... </label>
+                    <input id="checkout-address-cont" class="input__field js-checkout-input">
+                </div>
+                <div class="input">
+                    <label for="checkout-zip-code" class="input__label">Zip code <span
+                                class="required-field"></span></label>
+                    <input id="checkout-zip-code" class="input__field js-checkout-input" required>
+                </div>
+                <div class="input">
+                    <label for="checkout-city" class="input__label">City <span class="required-field"></span></label>
+                    <input id="checkout-city" class="input__field js-checkout-input" required>
+                </div>
+                <div class="input">
+                    <label for="checkout-state" class="input__label">State <span class="required-field"></span></label>
+                    <input id="checkout-state" class="input__field js-checkout-input" required>
+                </div>
+                <div class="dropdown">
+                    <label class="input__label">First name <span class="required-field"></span></label>
+                    <button type="button" class="input__field dropdown__button"><span
+                                class="dropdown__choosed-item"><input value="United States" class="js-checkout-input"
+                                                                      disabled required></span>
+                        <span class="dropdown__caret"><i class="material-icons">keyboard_arrow_down</i></span></button>
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item">United States</li>
+                        <li class="dropdown__item">Poland</li>
+                    </ul>
+
+                </div>
+                <h2 class="heading">Payment</h2>
+                <div class="input">
+                    <label for="checkout-card-number" class="input__label">Card number <span
+                                class="required-field"></span></label>
+                    <input id="checkout-card-number" class="input__field js-checkout-input" required>
+                </div>
+                <div class="input">
+                    <label for="checkout-card-holder" class="input__label">Card holder <span
+                                class="required-field"></span></label>
+                    <input id="checkout-card-holder" class="input__field js-checkout-input" required>
+                </div>
+                <div class="input">
+                    <label for="checkout-cvc" class="input__label">CVC <span class="required-field"></span></label>
+                    <input id="checkout-cvc" class="input__field js-checkout-input" required>
+                </div>
+                <div class="">
+                    <button type="submit" class="button button--not-valid js-checkout-button" disabled>Checkout</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 wide-padding">
+            <h2 class="heading">Order</h2>
+            <div class="order-summary">
+                <div class="order-summary__row">
+
+                    <div class="order-summary__fields">
+                        <div class="order-summary__product-name">Acme product</div>
+
+                        <div class="order-summary__row">
+                            <div class="order-summary__label">Qty</div>
+                            <div class="order-summary__value"><span class="js-checkout-quantity">0</span></div>
+                        </div>
+                        <div class="order-summary__row">
+                            <div class="order-summary__label">Price</div>
+                            <div class="order-summary__value">$100,000</div>
+                        </div>
+                    </div>
+                    <div class="order-summary__image"><img src=""></div>
+                </div>
+                <div class="order-summary__hr">
+                    <hr>
+                </div>
+                <div>
+                    <div class="order-summary__row">
+                        <div class="order-summary__label">Subtotal</div>
+                        <div class="order-summary__value">$100,000</div>
+                    </div>
+                    <div class="order-summary__row">
+                        <div class="order-summary__label">Tax</div>
+                        <div class="order-summary__value">$1,000</div>
+                    </div>
+                    <div class="order-summary__row">
+                        <div class="order-summary__label">Shipping</div>
+                        <div class="order-summary__value">$10,000</div>
+                    </div>
+                    <div class="order-summary__row">
+                        <div class="order-summary__label order-summary__label--bold">Total</div>
+                        <div class="order-summary__value">$111,000</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}

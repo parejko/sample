@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+
+  padding: 0 15px;
+  margin: 0 auto;
+  @media all and (min-width: 767px) {
+    display: flex;
+    width: 760px;
+  }
+}
+
+.col-md-6 {
+  margin-bottom: 50px;
+  @media all and (min-width: 767px) {
+    flex: 0 50%;
+    padding: 0 15px;
+  }
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.wide-padding {
+
+  @media all and (min-width: 767px) {
+    padding: 0 40px;
+  }
+}

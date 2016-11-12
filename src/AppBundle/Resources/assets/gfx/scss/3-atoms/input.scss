@@ -1,0 +1,31 @@
+.input {
+  &__field {
+    display: block;
+    margin: 8px 0 16px;
+    padding: 17px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $light-grey;
+    border-radius: 2px;
+    &:focus {
+      outline-color: $accent;
+    }
+
+  }
+  &__label {
+    @extend %caption;
+    display: block;
+    margin: 8px 0;
+
+  }
+}
+
+.required-field {
+  &::after {
+    content: '•';
+    color: $warning;
+
+    font-size: 15px;
+
+  }
+}

@@ -1,0 +1,8 @@
+.idea/
+node_modules/
+app/cache/
+vendor/
+web/bundles/framework
+web/bundles/sensiodistribution/
+bin/
+app/config

@@ -1,0 +1,41 @@
+.order-summary {
+  &__fields {
+    flex: 1;
+
+  }
+  &__image {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin: 0 0 10px 10px;
+    background-color: $accent;
+    img {
+      max-width: 80px;
+      max-height: 80px;
+    }
+  }
+  &__hr {
+    padding-bottom: 40px;
+  }
+  &__row {
+    display: flex;
+  }
+  &__product-name {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 17px;
+  }
+  &__label {
+
+    text-align: left;
+    flex: 1;
+    &--bold {
+      font-weight: 700;
+    }
+  }
+  &__value {
+    text-align: right;
+    flex: 1;
+
+  }
+}

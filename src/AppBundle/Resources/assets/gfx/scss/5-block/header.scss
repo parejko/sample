@@ -1,0 +1,41 @@
+
+.header {
+  border: 1px solid #000;
+  width: 100%;
+  background: white;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      // display: inline-block;
+    }
+  }
+}
+
+.menu {
+
+  display: flex;
+}
+
+.checkout-button {
+  a, a:visited, a:hover {
+    color: $accent-dark;
+    text-decoration: none;
+
+  }
+  &__label {
+    display: none;
+    @media all and (min-width: 767px) {
+      display: inline-block;
+    }
+
+  }
+  &__icon {
+
+    @media all and (min-width: 767px) {
+
+      display: none;
+    }
+  }
+}

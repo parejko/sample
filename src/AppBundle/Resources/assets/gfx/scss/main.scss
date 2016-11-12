@@ -1,16 +1,18 @@
-header{
-  border:1px solid #000;
-  width:100%;
 
-  ul{
-    list-style: none;
-    li {
-      display:inline-block;
-    }
-  }
-}
 
-footer{
-  border:1px solid #000;
-  width:100%;
-}
+@import "1-settings/colors";
+@import "1-settings/typography";
+
+@import "2-base/html";
+@import "2-base/grid";
+
+@import "3-atoms/order-summary";
+@import "3-atoms/input";
+@import "3-atoms/dropdown";
+@import "3-atoms/button";
+@import "3-atoms/brand";
+@import "3-atoms/headings";
+
+@import "4-molecules/navigation";
+
+@import "5-block/header";
